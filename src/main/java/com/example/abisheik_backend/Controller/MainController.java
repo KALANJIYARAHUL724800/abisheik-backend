@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/form")
+@CrossOrigin("*")
 public class MainController {
     @Autowired
     private MainService mainService;
