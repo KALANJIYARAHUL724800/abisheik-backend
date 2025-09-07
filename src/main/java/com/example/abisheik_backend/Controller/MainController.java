@@ -16,5 +16,9 @@ public class MainController {
     public ResponseEntity postData(@RequestBody MainModel model){
         return new ResponseEntity(mainService.postData(model),HttpStatus.OK);
     }
-
+    @GetMapping
+    public ResponseEntity getAllFormData()
+    {
+        return new ResponseEntity(mainService.getAllForm(),HttpStatus.OK);
+    }
 }

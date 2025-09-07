@@ -5,6 +5,8 @@ import com.example.abisheik_backend.Repository.MainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MainService {
     @Autowired
@@ -13,5 +15,8 @@ public class MainService {
     public MainModel postData(MainModel model){
         return mainRepository.save(model);
     }
-
+public List<MainModel> getAllForm()
+{
+    return mainRepository.findAll();
+}
 }
